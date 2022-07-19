@@ -9,10 +9,10 @@ function App () {
     setTimeout(() => {
       setToken('34q4m4k3ak43ak4kak4')
     }, 4000)
-  }, [setToken])
+  }, [])
 
   return (
-    <ThemeContext.Provider value={{ ...themes.primary, token }}>
+    <ThemeContext.Provider value={{ ...themes.secondary, token }}>
       <Card />
     </ThemeContext.Provider>
   )

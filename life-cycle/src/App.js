@@ -4,7 +4,7 @@ import Twitter from './Twitter'
 class App extends Component {
 
   state = {
-    loading: false,
+  loading: false,
     actived: true
   }
 
