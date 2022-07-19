@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from './Theme'
+import {TokenContext} from './token'
 
 function Form() {
 
   const context = useContext(ThemeContext)
-
+  const token = useContext(TokenContext)
   const renderForm = (
     <form>
       <label>Nome:</label>
@@ -26,7 +27,7 @@ function Form() {
 
   return (
     <div>
-      {!context.token ? renderNotLogged : renderForm}
+      {!token ? renderNotLogged : renderForm}
     </div>
   )
 }

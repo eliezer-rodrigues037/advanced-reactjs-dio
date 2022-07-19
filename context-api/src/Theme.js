@@ -2,7 +2,7 @@ import { createContext } from 'react'
 
 export const themes = {
     primary: {
-        background: '#000',
+        background: '#212121',
         color: '#efefef'
     },
     secondary: {
@@ -11,4 +11,4 @@ export const themes = {
     }
 }
 
-export const ThemeContext = createContext(themes.secondary)
+export const ThemeContext = createContext(themes.secondary);

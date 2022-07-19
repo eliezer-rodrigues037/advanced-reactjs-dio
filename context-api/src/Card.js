@@ -3,12 +3,12 @@ import { ThemeContext } from './Theme'
 import Form from './Form'
 
 function Card() {
-  const theme = useContext(ThemeContext)
-  console.log('theme:values', theme)
+  const theme = useContext(ThemeContext);
+
   return (
     <div style={{ padding: '50px' }}>
       <Form />
-      <button style={{ background: theme.background, color: theme.color }}>Card Button</button>
+      <button style={{ background: theme.background, color: theme.color }} onClick={() => console.log(theme)} >Card Button</button>
     </div>
   )
 }

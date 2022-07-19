@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { ThemeContext, themes } from './Theme' 
+import React, { useState, useEffect,useContext } from 'react'
+import { ThemeContext } from './Theme' 
+import {TokenContext} from './token'
 import Card from './Card'
 
 function App () {
-  const [token, setToken] = useState()
+  const [token, setToken] = useState();
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -12,9 +14,11 @@ function App () {
   }, [])
 
   return (
-    <ThemeContext.Provider value={{ ...themes.secondary, token }}>
-      <Card />
-    </ThemeContext.Provider>
+    <TokenContext.Provider value={token}>
+      <ThemeContext.Provider value={ThemeContext._currentValue}>
+        <Card />
+      </ThemeContext.Provider>
+    </TokenContext.Provider>
   )
 }
 
