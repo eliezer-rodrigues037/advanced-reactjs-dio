@@ -7,7 +7,7 @@ function Form() {
   const context = useContext(ThemeContext)
   const token = useContext(TokenContext)
   const renderForm = (
-    <form>
+    <form style={{display:'flex', flexDirection:'column'}}>
       <label>Nome:</label>
       <input />
       <label>E-mail:</label>
